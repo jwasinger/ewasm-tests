@@ -1,0 +1,6 @@
+[submodule "tests"]
+	path = tests
+	url = https://github.com/ethereum/tests
+[submodule "evm2wasm"]
+	path = evm2wasm
+	url = https://github.com/jwasinger/evm2wasm

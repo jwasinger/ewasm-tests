@@ -1,0 +1,18 @@
+{
+  "name": "ewasm-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convert.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "cd node_modules/evm2wasm/tools/wabt && make"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "evm2wasm": "git+https://github.com/jwasinger/evm2wasm.git"
+  }
+}
