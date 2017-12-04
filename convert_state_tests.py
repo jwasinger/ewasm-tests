@@ -7,7 +7,7 @@ def evm2wasm(code):
   if error != '':
     raise Exception(error)
 
-  return result.stdout.decode('utf-8')
+  return result.stdout.decode('utf-8').strip('\n')
 
 def convert_state_test(file_name):
   state_test = None
