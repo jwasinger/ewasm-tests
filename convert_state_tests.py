@@ -27,11 +27,11 @@ def convert_state_test(file_name):
     # conver pre account code
     for addr in state_test[test_case]['pre']:
       if state_test[test_case]['pre'][addr]['code'] != '':
-        state_test[test_case]['pre'][addr]['code'] = evm2wasm(state_test[test_case]['pre'][addr]['code'])
+        state_test[test_case]['pre'][addr]['code'] = '0x'+evm2wasm(state_test[test_case]['pre'][addr]['code'])
 
     if state_test[test_case]['transaction']['data'] != '':
       for i in range(0, len(state_test[test_case]['transaction']['data'])):
-        state_test[test_case]['transaction']['data'][i] = evm2wasm(state_test[test_case]['transaction']['data'][i])
+        state_test[test_case]['transaction']['data'][i] = '0x'+evm2wasm(state_test[test_case]['transaction']['data'][i])
 
   with open(file_name, 'w') as f:
     f.write(json.dumps(state_test, indent=4, sort_keys=True))
